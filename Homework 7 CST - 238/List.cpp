@@ -163,3 +163,42 @@ int List::findLast(ElementType item)
 	}
 	return -1;
 }
+
+//Erik's code to count the duplicates of each value.
+void List::countDuplicates()
+{
+	ElementType max = INT_MIN;
+	
+	for (int i = 0; i < mySize; i++)
+	{
+		if (myArray[i] > max)
+		{
+			max = myArray[i];
+		}
+	}
+	const ElementType constantMax = max;
+	ElementType *countHowManyOfThisValue = new ElementType[constantMax];
+	for (int i = 0; i < max; i++)
+	{
+		*(countHowManyOfThisValue + i) = 0;
+		cout << *(countHowManyOfThisValue + i) << endl;
+	}
+	//countHowManyOfThisValue[max];
+	for (int i = 0; i < mySize; i++)
+	{
+		for (int j = 0; j < mySize; j++)
+		{
+			if (myArray[i] == myArray[j])
+			{
+				*(countHowManyOfThisValue+i) += 1;
+			}
+		}
+	}
+	for (int i = 0; i < max; i++)
+	{
+		if (*(countHowManyOfThisValue + i) > 0)
+		{
+			cout << *(countHowManyOfThisValue + i) << " --> " << i << endl;
+		}
+	}
+}

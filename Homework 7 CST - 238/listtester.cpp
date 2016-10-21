@@ -15,44 +15,21 @@ using namespace std;
 
 int main()
 {
-
-	// Test the class constructor
-	List intList;
-	cout << "Constructing intList\n";
-
-	// Test addItem() by adding 30, 30, 40, 50, 10, and 60.
-	cout << "Adding 30." << endl;
-	intList.addItem(30);
-
-	cout << "Adding 30." << endl;
-	intList.addItem(30);
-
-	cout << "Adding 40." << endl;
-	intList.addItem(40);
-
-	cout << intList << endl;
-
-	cout << "Adding 50." << endl;
-	intList.addItem(50);
-
-	cout << "Adding 10." << endl;
-	intList.addItem(10);
-
-	cout << "Adding 60." << endl;
-	intList.addItem(60);
-
-	cout << intList << endl;
-
-	// Test findLast()
-	cout << "Position (30): " << intList.findLast(30) << endl;
-	cout << "Position (70): " << intList.findLast(70) << endl;
-
-	// Test deleteItem() by deleting 30, 40, and 60 from the list
-	cout << "deleteItem 30: " << intList.deleteItem(30) << endl;
-	cout << "deleteItem 40: " << intList.deleteItem(40) << endl;
-	cout << "deleteItem 60: " << intList.deleteItem(60) << endl;
-
-	cout << intList << endl;
-
+	List scoreList;
+	 cout << "Constructing scoreList\n";
+	 // Test addItem() by adding 80.5, 100.0, 89.0, 75.5, and 100.0.
+	 scoreList.addItem(2);
+	 scoreList.addItem(2);
+	 scoreList.addItem(2);
+	 scoreList.addItem(3);
+	 scoreList.addItem(4);
+	 scoreList.addItem(3);
+	 scoreList.addItem(5);
+	 scoreList.addItem(6);
+	 scoreList.addItem(5);
+	//CST238 Page 2 of 2 Homework 6
+	//cout << scoreList << endl;
+	cout << "Duplicate counter test: " << endl;
+	scoreList.countDuplicates();
 	return 0;
 }

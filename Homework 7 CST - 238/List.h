@@ -29,7 +29,7 @@ findLast:   Search an item
 #ifndef LIST
 #define LIST
 
-const int CAPACITY = 5;
+const int CAPACITY = 10;
 typedef int ElementType;
 
 class List
@@ -44,11 +44,12 @@ public:
 	bool deleteItem(ElementType item);
 	int findLast(ElementType item);
 	void display(ostream & out) const;
-
+	void countDuplicates();
+	void deleteDuplicates(ElementType item);
+	void reverseList(ElementType item);
 private:
 	int mySize;                     // current size of list stored in myArray
 	ElementType myArray[CAPACITY];  // array to store list elements
-
 }; //--- end of List class
 
    //------ Prototype of output operator
